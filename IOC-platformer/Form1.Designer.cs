@@ -70,7 +70,6 @@
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -124,7 +123,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox1.BackColor = System.Drawing.Color.Green;
             this.pictureBox1.Location = new System.Drawing.Point(-7, 736);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(325, 30);
@@ -134,7 +133,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox2.BackColor = System.Drawing.Color.Green;
             this.pictureBox2.Location = new System.Drawing.Point(317, 656);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(231, 30);
@@ -144,7 +143,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox3.BackColor = System.Drawing.Color.Green;
             this.pictureBox3.Location = new System.Drawing.Point(181, 581);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(115, 30);
@@ -154,7 +153,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox4.BackColor = System.Drawing.Color.Green;
             this.pictureBox4.Location = new System.Drawing.Point(47, 501);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(115, 30);
@@ -164,7 +163,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox5.BackColor = System.Drawing.Color.Green;
             this.pictureBox5.Location = new System.Drawing.Point(218, 397);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(310, 30);
@@ -174,7 +173,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox6.BackColor = System.Drawing.Color.Green;
             this.pictureBox6.Location = new System.Drawing.Point(35, 300);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(127, 30);
@@ -184,7 +183,7 @@
             // 
             // horizontalPlatform
             // 
-            this.horizontalPlatform.BackColor = System.Drawing.Color.Maroon;
+            this.horizontalPlatform.BackColor = System.Drawing.Color.Green;
             this.horizontalPlatform.Location = new System.Drawing.Point(275, 142);
             this.horizontalPlatform.Name = "horizontalPlatform";
             this.horizontalPlatform.Size = new System.Drawing.Size(199, 30);
@@ -194,7 +193,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox8.BackColor = System.Drawing.Color.Green;
             this.pictureBox8.Location = new System.Drawing.Point(-7, 67);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(169, 30);
@@ -204,7 +203,7 @@
             // 
             // verticalPlatform
             // 
-            this.verticalPlatform.BackColor = System.Drawing.Color.Maroon;
+            this.verticalPlatform.BackColor = System.Drawing.Color.Green;
             this.verticalPlatform.Location = new System.Drawing.Point(558, 581);
             this.verticalPlatform.Name = "verticalPlatform";
             this.verticalPlatform.Size = new System.Drawing.Size(84, 30);
@@ -223,7 +222,7 @@
             // 
             // door
             // 
-            this.door.BackColor = System.Drawing.Color.DarkGreen;
+            this.door.BackColor = System.Drawing.Color.SaddleBrown;
             this.door.Location = new System.Drawing.Point(2, 12);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(42, 58);
@@ -232,7 +231,7 @@
             // 
             // enemyOne
             // 
-            this.enemyOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.enemyOne.BackColor = System.Drawing.Color.Red;
             this.enemyOne.Location = new System.Drawing.Point(471, 361);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(30, 40);
@@ -242,7 +241,7 @@
             // 
             // enemyTwo
             // 
-            this.enemyTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.enemyTwo.BackColor = System.Drawing.Color.Red;
             this.enemyTwo.Location = new System.Drawing.Point(360, 623);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(30, 40);
@@ -516,23 +515,12 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(255, 240);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(654, 761);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox36);
             this.Controls.Add(this.pictureBox34);
             this.Controls.Add(this.pictureBox17);
@@ -617,7 +605,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -664,7 +651,6 @@
         private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.Timer gameTimer;
-        private System.Windows.Forms.Label label1;
     }
 }
 

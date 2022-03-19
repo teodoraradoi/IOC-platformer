@@ -35,8 +35,7 @@ namespace IOC_platformer
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
-            txtScore.Text = "Score: " + score;
-            label1.Hide();
+            txtScore.Text = "Score: " + score;         
 
             player.Top += jumpSpeed;
 
@@ -68,8 +67,6 @@ namespace IOC_platformer
             {
                 if (x is PictureBox)
                 {
-
-
                     if ((string)x.Tag == "platform")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds))
@@ -82,12 +79,8 @@ namespace IOC_platformer
                             {
                                 player.Left -= horizontalSpeed;
                             }
-
-
                         }
-
                         x.BringToFront();
-
                     }
 
                     if ((string)x.Tag == "coin")
@@ -106,15 +99,13 @@ namespace IOC_platformer
                         {
                             gameTimer.Stop();
                             isGameOver = true;
-                            txtScore.Text = "Score: " + score + " You died!";
-                            label1.Text = "YOU DIED!";
-                            label1.Show();
+                            txtScore.Text = "Score: " + score +Environment.NewLine + "You were killed!" + Environment.NewLine + "Press enter to try again";
                         }
                     }
 
                 }
             }
-
+            
 
             horizontalPlatform.Left -= horizontalSpeed;
 
@@ -150,10 +141,7 @@ namespace IOC_platformer
             {
                 gameTimer.Stop();
                 isGameOver = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "You fell to your death!";
-                label1.Text = "YOU DIED!";
-                label1.Show();
-
+                txtScore.Text = "Score: " + score + Environment.NewLine + "You fell to your death!" + Environment.NewLine + "Press enter to try again";
             }
 
             if (player.Bounds.IntersectsWith(door.Bounds) && score == 26)
@@ -162,7 +150,7 @@ namespace IOC_platformer
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Your quest is complete!";
             }
-            else
+            else if(!isGameOver)
             {
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
             }
@@ -205,8 +193,6 @@ namespace IOC_platformer
             {
                 RestartGame();
             }
-
-
         }
 
         private void RestartGame()
@@ -220,6 +206,7 @@ namespace IOC_platformer
 
             txtScore.Text = "Score: " + score;
 
+            // make all the coins visible again
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Visible == false)
@@ -229,7 +216,7 @@ namespace IOC_platformer
             }
 
 
-            // reset the position of player, platform and enemies
+            // reset the position of player, moving platforms and enemies
 
             player.Left = 72;
             player.Top = 656;
