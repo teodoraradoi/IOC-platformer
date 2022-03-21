@@ -190,6 +190,7 @@ namespace IOC_platformer
                 gameTimer.Stop();
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Your quest is complete!";
+                timer1.Start();
             }
             else if(!isGameOver)
             {
